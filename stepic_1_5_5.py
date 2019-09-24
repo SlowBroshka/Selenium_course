@@ -21,7 +21,7 @@ def click_register(page):
 
 
 def main(link):
-    browser = webdriver.Chrome()    #DRIVER
+    browser = webdriver.Chrome(DRIVER)    #DRIVER
     browser.get(link)
 
     try:
@@ -39,7 +39,6 @@ def main(link):
         print(ex)
     finally:
         print('Close Browser')
-        browser.close()
         browser.quit()
 
 
